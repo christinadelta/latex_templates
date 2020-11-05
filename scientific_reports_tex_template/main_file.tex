@@ -1,0 +1,77 @@
+% Scientific Reports Template 
+% Version 1 
+
+% THE ONLY THINGS YOU NEED TO TO:
+% 1. CHANGE TEXT IN EVERY SECTION WITH YOUR TEXT
+% 2. CHANGE THE FIGURES AND TABLES
+% 3. CHANGE THE REFERENCES 
+% 4. CHANGE THE SUPPORTING INFORMATION
+
+% The template includes 8 sub-files:
+% 1. Title / authors / affiliations
+% 2. Abstract
+% 3. Introduction
+% 4. Materials and Methods
+% 5. Results
+% 6. Discussion
+% 7. References
+% 8. Addendum
+% 9. Figures / Tables ?
+
+% This file puts everything in order. This way, we wont end up having a huge (messy) file with thousands and thousands lines. It will be easier to work on each section separately, make changes where needed, etc..
+
+% All the figures and tables are in the figures folder, and the
+% suppl material are in the supporting material folder. 
+
+% -----------------------------------------------------------------%
+% PREAMBLE STARTS HERE:
+
+% I will be using the "wlscirep" package. This package comes with 2
+% files: {wlscirep, naturemag.bst}. These two files should be placed
+% in the same directory as the main file of your paper.
+
+% Import packages
+\documentclass[fleqn,10pt]{wlscirep}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% it is suggested that the "subfiles" package is defined as last in the preamble.. no idea why!
+\usepackage{subfiles}
+
+% add the abstract. In the wlscirep package, the abstract goes in the preamble and not in the main document. 
+\input{abstract}
+
+% -----------------------------------------------------------------%
+% MAIN DOCUMENT STARTS HERE
+
+\begin{document}
+
+\input{title}
+
+\section*{}
+\subfile{sections/introduction}
+
+\subfile{sections/methods}
+
+\section*{}
+\subfile{sections/results}
+
+\section*{}
+\subfile{sections/discussion}
+
+% references of the main paper
+\section*{}
+\bibliographystyle{naturemag}
+\bibliography{sections/references}
+
+\end{document}
+
+% ----------------------------------------------------------- %
+% that's it!
+
+%%%%% TODO:
+% 1. add example figures/tables and specify paths 
+% 2. add example supporting material
+
